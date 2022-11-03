@@ -1,0 +1,10 @@
+[{"idProducto":1,"nombre":"tomate","descripcion":"Producto 100% del campo a su mesa. ","cantidad":5,"precio":"$5.710"},
+{"idProducto":2,"nombre":"granadilla","descripcion":"Producto 100% del campo a su mesa. ","cantidad":5,"precio":"$6.460"},
+{"idProducto":3,"nombre":"Sandia","descripcion":"Producto 100% del campo a su mesa. ","cantidad":5,"precio":"$1.270"},
+{"idProducto":4,"nombre":"cebolla","descripcion":"Producto 100% del campo a su mesa. ","cantidad":5,"precio":"$1.000"},
+{"idProducto":5,"nombre":"albaca","descripcion":"Producto 100% del campo a su mesa. ","cantidad":5,"precio":"$5.030"},
+{"idProducto":6,"nombre":"pepino","descripcion":"Producto 100% del campo a su mesa. ","cantidad":5,"precio":"$2.339"},
+{"idProducto":7,"nombre":"Zanahoria","descripcion":"Producto 100% del campo a su mesa. ","cantidad":5,"precio":"$600"},
+{"idProducto":8,"nombre":"brocoli","descripcion":"Producto 100% del campo a su mesa. ","cantidad":5,"precio":"$690"},
+{"idProducto":9,"nombre":"manzana","descripcion":"Producto 100% del campo a su mesa. ","cantidad":5,"precio":"$1.000"},
+{"idProducto":10,"nombre":"papa","descripcion":"Producto 100% del campo a su mesa. ","cantidad":5,"precio":"$1.500"}]
