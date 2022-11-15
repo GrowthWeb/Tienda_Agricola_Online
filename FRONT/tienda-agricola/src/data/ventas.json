@@ -1,0 +1,10 @@
+[{"idVenta":1,"fecha":"12/10/2021","nombreProducto":"Wine - Riesling Alsace Ac 2001","cantidad":1,"valorUnitario":"$7.32","subtotal":"$2.50"},
+{"idVenta":2,"fecha":"9/11/2022","nombreProducto":"Temperature Recording Station","cantidad":2,"valorUnitario":"$5.15","subtotal":"$0.14"},
+{"idVenta":3,"fecha":"9/5/2022","nombreProducto":"Chicken - Wieners","cantidad":3,"valorUnitario":"$1.71","subtotal":"$0.26"},
+{"idVenta":4,"fecha":"8/8/2022","nombreProducto":"Wine - White, Cooking","cantidad":4,"valorUnitario":"$9.69","subtotal":"$5.37"},
+{"idVenta":5,"fecha":"5/24/2022","nombreProducto":"Cake Circle, Paprus","cantidad":5,"valorUnitario":"$1.21","subtotal":"$2.36"},
+{"idVenta":6,"fecha":"6/16/2022","nombreProducto":"Creme De Menthe Green","cantidad":6,"valorUnitario":"$6.73","subtotal":"$3.63"},
+{"idVenta":7,"fecha":"1/21/2022","nombreProducto":"Wine - Sicilia Igt Nero Avola","cantidad":7,"valorUnitario":"$1.45","subtotal":"$5.19"},
+{"idVenta":8,"fecha":"6/26/2022","nombreProducto":"Pork - Ground","cantidad":8,"valorUnitario":"$2.78","subtotal":"$6.00"},
+{"idVenta":9,"fecha":"3/12/2022","nombreProducto":"Coffee - Ristretto Coffee Capsule","cantidad":9,"valorUnitario":"$4.03","subtotal":"$1.28"},
+{"idVenta":10,"fecha":"8/1/2022","nombreProducto":"Spinach - Spinach Leaf","cantidad":10,"valorUnitario":"$9.55","subtotal":"$6.33"}]

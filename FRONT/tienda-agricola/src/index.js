@@ -5,6 +5,7 @@ import App from './App';
 import {CrearProductos}  from './components/AgregarProductos';
 import { CrearUsuario } from './components/AgregarUsuarios';
 import { ListaUsuarios } from './components/Usuarios';
+import { ListaProductos } from './components/Productos';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -12,6 +13,7 @@ root.render(
     <CrearProductos/>
     <CrearUsuario/>
     <ListaUsuarios/>
+    <ListaProductos/>
   </React.StrictMode>
   
 );
