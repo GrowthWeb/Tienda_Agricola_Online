@@ -1,36 +1,36 @@
 import mongoose from "mongoose";
  
-const usuarioSchema=  new mongoose.Schema({
+const ventaSchema=  new mongoose.Schema({
 
-    nombreUsuario: {
+    fecha:{
         type: String,
         required: true,
         trim: true
 
     },
-    email: {
+    nombre_producto:{
         type: String,
         required: true,
         trim: true
     },
-    usuario:{
-        type: String,
-        required: true,
-        trim: true
-
-    },
-    password:{
-        type: String,
+    cantidad:{
+        type: Number,
         required: true,
         trim: true
 
     },
-    rol:{
-        type: String,
+    valor:{
+        type: Number,
+        required: true,
+        trim: true
+
+    },
+    total:{
+        type: Number,
         required: true,
         trim: true
     }
     
 });
 
-export default mongoose.model ('usuarios', usuarioSchema);
+export default mongoose.model ('ventas', ventaSchema);

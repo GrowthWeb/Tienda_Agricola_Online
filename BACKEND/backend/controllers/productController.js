@@ -6,8 +6,8 @@ import fs from 'fs-extra';
 export const getProductos = async (req, res) => {
 
     try{
-    const  listproductos = await productos.find()
-    res.send(listproductos)
+    const  listProductos = await productos.find()
+    res.send(listProductos)
     }catch(error){
         return res.sendStatus(500);
     }
