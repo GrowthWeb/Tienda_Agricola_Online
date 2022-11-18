@@ -11,8 +11,8 @@ export const getUsuarios = async (req, res) => {
 };
 export const createUsuario = async (req, res) => {
     try{
-        const {nombreUsuario,email,usuario,password,rol} = req.body;
-        const newUsuario = new productos({nombreUsuario,email,usuario,password,rol})
+        const {idUsuario,nombreUsuario,email,usuario,password,rol} = req.body;
+        const newUsuario = new usuarios({idUsuario,nombreUsuario,email,usuario,password,rol})
         await newUsuario.save()
         return res.json(newUsuario)
     }catch(error){

@@ -1,5 +1,7 @@
 import express  from "express";
-import productsRoutes from '../routes/productRouter.js';
+import productsRouter from '../routes/productRouter.js';
+import usersRouter from '../routes/userRouter.js'
+import ventasRouter from '../routes/ventaRouter.js'
 import fileupload from 'express-fileupload';
 
 
@@ -12,7 +14,9 @@ app.use(fileupload({
     
 }));
 
-app.use(productsRoutes)
+app.use(productsRouter)
+app.use(usersRouter)
+app.use(ventasRouter)
 
 
 export default app;

@@ -11,8 +11,8 @@ export const getVentas = async (req, res) => {
 };
 export const createventa = async (req, res) => {
     try{
-        const {fecha,nombre_producto,cantidad,valor,total} = req.body;
-        const newVenta = new productos({fecha,nombre_producto,cantidad,valor,total})
+        const {idVenta,fecha,nombre_producto,cantidad,valor,total} = req.body;
+        const newVenta = new ventas ({idVenta,fecha,nombre_producto,cantidad,valor,total})
         await newVenta.save()
         return res.json(newVenta)
     }catch(error){
