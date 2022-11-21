@@ -5,6 +5,7 @@ import ventasRouter from '../routes/ventaRouter.js'
 import fileupload from 'express-fileupload';
 
 
+
 const app = express();
 
 app.use(express.json())

@@ -1,73 +1,75 @@
-import { Fragment, useState } from "react";
+import React, { useState } from 'react';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import Modal from 'react-bootstrap/Modal';
 
-export function CrearUsuario(){
-    const [data, setDate]=useState({
+export function  CrearUsuario() {
+  const [show, setShow] = useState(false);
 
-        IdUsuario: "",
-        nombre: "",
-        email: "",
-        usuario: "",
-        password: "",
-        rol: ""
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
-    }
-    )
+  return (
+    <>
+      <Button variant="success" onClick={handleShow}>
+        Agregar Usuario
+      </Button>
 
-    return( 
-
-    <Fragment>
-        <center>
-            <div id="containerProduct">
-                <h3>Nuevo Usuario</h3>
-                    <label>Nombre
-                        <input type="User" onChange={(e) => {
-                            setDate({ ...data, Nombre: e.target.value })
-                        }
-                        } ></input>
-                    </label>
-                    <br></br>
-                    <br></br>
-                    <label>Correo
-                        <input type="email" onChange={(e) => {
-                            setDate({ ...data, Descripcion: e.target.value })
-                        }
-                        } ></input>
-                    </label>
-                    <br></br>
-                    <br></br>
-                    <label>Usuario
-                        <input type="User" onChange={(e) => {
-                            setDate({ ...data, Stock: e.target.value })
-                        }
-                        } ></input>
-                    </label>
-                    <br></br>
-                    <br></br>
-                    <label>Contraseña
-                        <input type="password" onChange={(e) => {
-                            setDate({ ...data, Valor: e.target.value })
-                        }
-                        } ></input>
-                    </label>
-                    <br></br>
-                    <br></br>
-                    <label>Rol
-                        <input type="user" onChange={(e) => {
-                            setDate({ ...data, pass: e.target.value })
-                        }
-                        }>
-                        </input>
-                    </label>
-                    <br></br>
-                    <br></br>
-                    
-                <button onClick>Crear Usuario</button>
-
-            </div>
-        </center>
-
-
-    </Fragment>
-
-    );
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Nuevo Usuario</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Form>
+            <Form.Group className="mb-3" controlId="name">
+              <Form.Label>Nombre Usuario</Form.Label>
+              <Form.Control
+                type="name"
+                placeholder="Nombre usuario"
+                autoFocus
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="email">
+              <Form.Label>Correo</Form.Label>
+              <Form.Control
+                type="email"
+                placeholder="name@example.com"
+                autoFocus
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="usuario">
+              <Form.Label>Usuario</Form.Label>
+              <Form.Control
+                type="email"
+                autoFocus
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="password">
+              <Form.Label>Contraseña</Form.Label>
+              <Form.Control
+                type="name"
+                autoFocus
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="rol">
+              <Form.Label>Rol</Form.Label>
+              <Form.Control
+                type="user"
+                autoFocus
+              />
+            </Form.Group>
+            
+          </Form>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Cerrar
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Guardar
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </>
+  );
 }
