@@ -51,7 +51,7 @@ export const getVenta = async (req, res) => {
     try {
 
         const idVenta = await ventas.findById(req.params.id)
-        if (idVenta){
+        if (!idVenta){
             return res.sendStatus(404);
         }else{ 
             return res.json(idVenta);

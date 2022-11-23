@@ -6,7 +6,7 @@ import { createUsuario, deleteUsuario, getUsuario, getUsuarios, updateUsuario} f
 const router= Router();
 
 router.get('/usuarios', getUsuarios);
-router.post('/usuarios', createUsuario);
+router.post('/crearUsuario', createUsuario);
 router.put('/usuarios/:id', updateUsuario);
 router.delete('/usuarios/:id', deleteUsuario);
 
