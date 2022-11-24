@@ -1,24 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import { BrowserRouter } from "react-router-dom"; 
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-
-
-import { CrearUsuario } from './components/AgregarUsuarios';
-import { CrearProductos } from './components/AgregarProductos';
-
-
-
+import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <BrowserRouter>
  
-    <CrearUsuario/>
-    <CrearProductos/>
+    <App/>
    
-    
+    </BrowserRouter>
 
   </React.StrictMode>
   

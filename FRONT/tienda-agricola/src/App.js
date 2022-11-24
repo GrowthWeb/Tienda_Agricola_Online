@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import { LoginUsuarios } from "./components/Login.js";
+import { HomePage } from "./components/Home.js";
+import { CrearProductos } from "./components/AgregarProductos.js";
+//import { ListaProductosAdmin } from "./Components/Productos.js";
+import { ListaVentas } from "./components/Ventas.js";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-function App() {
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>
-          Ya  <code> casi </code> salimos.
-        </h1>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<HomePage/>} />
+      <Route path="/Login" element={<LoginUsuarios/>} />
+      <Route path="/nuevoProducto" element={<CrearProductos />} />
+      <Route path="/listaVentas" element={<ListaVentas />} />         
+    </Routes>
   );
 }
-
-export default App;

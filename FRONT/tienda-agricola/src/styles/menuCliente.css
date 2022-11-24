@@ -1,0 +1,10 @@
+.barraMenu {
+
+    background-image: linear-gradient(270deg, #6e8611 0, #5f840e 12.5%, #4e820d 25%, #397f0e 37.5%, #1a7c11 50%, #007915 62.5%, #00751b 75%, #007222 87.5%, #006f29 100%);
+
+}
+.Navbar{
+    font-family: 'Overpass', sans-serif;
+    color: aliceblue;
+    font-size: 250%;
+}
