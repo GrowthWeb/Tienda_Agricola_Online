@@ -1,27 +1,17 @@
-import { Fragment, useState } from "react";
+import { Fragment, useState, React } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 
-export function CrearProductos(){
+
+
+export function CrearProductos() {
     const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-  
-  const [dataProduct, setData] = useState({
-  
-    nombreProducto: "",
-    descripcion: "",
-    precio: "",
-    stock: "",
-    image: ""
-}
-)
-
-  return (
-
-        <Fragment>
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+    return (
+            <Fragment>
             <>
                 <Button variant="success" onClick={handleShow}>
                     Añadir producto
@@ -32,14 +22,12 @@ export function CrearProductos(){
                         <Modal.Title>Nuevo producto</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                        <Form>
+                        <Form id="form">
                             <Form.Group className="mb-3" controlId="nameInput">
                                 <Form.Label>Nombre producto</Form.Label>
                                 <Form.Control
                                     type="text"
-                                    onChange={(e) => {
-                                        setData({ ...dataProduct, nombreProducto: e.target.value })
-                                    }}
+                                    name='nombreProducto'
                                     autoFocus
                                 />
                             </Form.Group>
@@ -47,9 +35,7 @@ export function CrearProductos(){
                                 <Form.Label>Descripción </Form.Label>
                                 <Form.Control
                                     type="text"
-                                    onChange={(e) => {
-                                        setData({ ...dataProduct, descripcion: e.target.append })
-                                    }}
+                                    name='descripcion'
                                     autoFocus
                                 />
                             </Form.Group>
@@ -57,9 +43,7 @@ export function CrearProductos(){
                                 <Form.Label>Precio</Form.Label>
                                 <Form.Control
                                     type="text"
-                                    onChange={(e) => {
-                                        setData({ ...dataProduct, precio: e.target.append })
-                                    }}
+                                    name='precio'
                                     autoFocus
                                 />
                             </Form.Group>
@@ -67,9 +51,7 @@ export function CrearProductos(){
                                 <Form.Label>Stock</Form.Label>
                                 <Form.Control
                                     type="text"
-                                    onChange={(e) => {
-                                        setData({ ...dataProduct, stock: e.target.value })
-                                    }}
+                                    name='stock'
                                     autoFocus
                                 />
                             </Form.Group>
@@ -77,45 +59,52 @@ export function CrearProductos(){
                                 <Form.Label>Imagen</Form.Label>
                                 <Form.Control
                                     type="file"
-                                    onChange={(e) => {
-                                        setData({ ...dataProduct, image: e.target.value })
-                                    }}
+                                    name='image'
                                     autoFocus
                                 />
                             </Form.Group>
-
+                            <Modal.Footer>
+                                <Button variant="secondary" onClick={handleClose}>
+                                    Cerrar
+                                </Button>
+                                <Button type='submit' id="submit" onClick={createProduct}>
+                                    Guardar
+                                </Button>
+                            </Modal.Footer>
                         </Form>
+
+                        
+    
                     </Modal.Body>
-                    <Modal.Footer>
-                        <Button variant="secondary" onClick={handleClose}>
-                            Cerrar
-                        </Button>
-                        <Button variant="primary" onClick={CrearProducto}>
-                            Guardar
-                        </Button>
-                    </Modal.Footer>
-                </Modal>
-            </>
-        </Fragment>
+                </Modal>  
+            </> 
+            </Fragment>
+        
+    )
+    function createProduct() {
+        const form = document.getElementById('form')
 
-  );
-  function CrearProducto() {
+        form.addEventListener('submit', function(e) {
+           
+            e.preventDefault();
 
-    const datosForm = FormData(dataProduct)
+            const formData = new FormData(this)
 
+            fetch("http://localhost:5000/crearProducto", {
+                method: "POST",
+                body: formData,
+                headers: {
+                    'Accept': '*/*',
+                    
+                },
+          
+            })
 
-    fetch("http://localhost:5000/crearProducto", {
-        method: "POST",
-        body: datosForm,
-        headers: {
-
-            "Content-Type": "application/json",
-        },
-
-    })
-
-    //Comprobacion  de los datos
-
-    alert("Producto guardado")
-}    
+        
+        })
+        //Comprobacion  de los datos
+        
+        alert("Datos almacenados correctamente")
+    }
+    
 };

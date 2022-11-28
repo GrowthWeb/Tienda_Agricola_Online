@@ -102,10 +102,9 @@ export function  CrearUsuario() {
   );
   function CrearUSuarios() {
         
-    const datosJSON = JSON.stringify(data)       
-    
+    const datosJSON = JSON.stringify(data) 
   
-    fetch("http://localhost:5000/crearUsuario", {
+    fetch("https://localhost:5000/crearUsuario", {
         method: "POST",
         body: datosJSON,
         headers: {
