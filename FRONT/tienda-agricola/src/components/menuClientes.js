@@ -34,7 +34,7 @@ export function MenuCliente() {
                 <Link className="nav-link" to={"/"}>Inicio</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to={"/ListaProductos"}>Lista productos</Link>
+                <Link className="nav-link" to={"/listaProductosCliente"}>Lista productos</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to={"/Carrito"}>Carrito
